@@ -20,7 +20,8 @@ public class ISO8583Parser {
         System.out.println("MTI:'" + isoMsg.getMTI() + "'");
         for (int i = 1; i <= isoMsg.getMaxField(); i++) {
             if (isoMsg.hasField(i))
-                System.out.println(i + "='" + isoMsg.getString(i) + "'");
+                System.out.printf("DE(%s) = %s%n",i , isoMsg.getString(i) + "'");
+
         }
     }
 }
